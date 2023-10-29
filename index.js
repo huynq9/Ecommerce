@@ -12,6 +12,7 @@ const productRouter = require("./routes/productRoute");
 const blogRouter = require("./routes/blogRoute");
 const proCategoryRouter = require("./routes/proCategoryRoute");
 const blogcategoryRouter = require("./routes/blogCategoryRoute");
+const brandRouter = require("./routes/brandRoute");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const { notFound, errorHandler } = require("./middlewares/errorHandler");
@@ -29,6 +30,7 @@ app.use("/api/product", productRouter);
 app.use("/api/blog", blogRouter);
 app.use("/api/category", proCategoryRouter);
 app.use("/api/blogcategory", blogcategoryRouter);
+app.use("/api/brand", brandRouter);
 app.use("/", (req, res) => {
   res.send("Hello from server side !");
 });
