@@ -30,9 +30,7 @@ var productSchema = new mongoose.Schema(
       type: Number,
       require: true,
     },
-    images: {
-      type: Array,
-    },
+    images: [],
     sold: {
       type: Number,
       default: 0,
@@ -50,6 +48,7 @@ var productSchema = new mongoose.Schema(
     ratings: [
       {
         star: Number,
+        comment: String,
         postedBy: {
           type: mongoose.Schema.Types.ObjectId,
           ref: "User",
